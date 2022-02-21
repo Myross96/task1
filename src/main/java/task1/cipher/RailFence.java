@@ -7,6 +7,10 @@ public class RailFence {
 			throw new RuntimeException("Key can`t be less then 1");
 		}
 		
+		if (message.equals("")) {
+			return "";
+		}
+		
 		StringBuilder encodedMessage = new StringBuilder();
 		
 		for (int i = 0; i < key; i++) {
@@ -21,6 +25,10 @@ public class RailFence {
 	public String decode(String message, int key) {
 		if (key <= 0) {
 			throw new RuntimeException("Key can`t be less then 1");
+		}
+		
+		if (message.equals("")) {
+			return "";
 		}
 		
 		StringBuilder decodedMessage = new StringBuilder(message);
